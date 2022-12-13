@@ -51,8 +51,6 @@ class AddTask : BottomSheetDialogFragment() {
             val newTaskItem = ToDo(taskName,taskDes) //create list item
             indivTaskViewModel.addItem(newTaskItem) //add newItem to list
 
-//            binding.etTaskTitle.text?.clear()
-//            binding.etDescription.text?.clear()
             dismiss()
         } else {
             textInputLayoutTask.error = "Please insert Task Title!!"

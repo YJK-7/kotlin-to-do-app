@@ -37,11 +37,9 @@ class MainActivity : AppCompatActivity(), ToDoAdapter.OnItemClickListenerInterfa
 
         efabAdd.setOnClickListener {
             if(isAllFABsVisible == false){
-//                println("🐽 $isAllFABsVisible")
 //              set isAllFABsVisible to true so second click will run else
                 onAddBtClicked()
             } else {
-//                println("🐤 $isAllFABsVisible")
 //                show fragment(popup to add new tasks) which has function
 //                for save button, call saveAction()
 //                saveAction() uses additem() of indivTaskViewModel
@@ -52,11 +50,11 @@ class MainActivity : AppCompatActivity(), ToDoAdapter.OnItemClickListenerInterfa
             }
         }
 
-        setRecyclerView()
-
         fabClose.setOnClickListener {
             onCloseClicked()
         }
+
+        setRecyclerView()
     }
 
     //    implement interface method
@@ -74,7 +72,6 @@ class MainActivity : AppCompatActivity(), ToDoAdapter.OnItemClickListenerInterfa
 //            set click event to delConeToDo() from TodoAdapter
             fabDel.setOnClickListener {
                 indivTaskViewModel.deleteItem()
-//                tdAdapter.delDoneToDo()
             }
         }
     }
