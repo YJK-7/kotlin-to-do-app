@@ -30,7 +30,6 @@ class UpdateTask(position: Int) : BottomSheetDialogFragment() {
             binding.etTaskTitle.setText(toDoObj.title)
             binding.etDescription.setText(toDoObj.desc)
         }
-
     }
 
     override fun onCreateView(

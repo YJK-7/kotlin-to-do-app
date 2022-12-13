@@ -52,6 +52,7 @@ class AddTask : BottomSheetDialogFragment() {
             indivTaskViewModel.addItem(newTaskItem) //add newItem to list
 
             dismiss()
+
         } else {
             textInputLayoutTask.error = "Please insert Task Title!!"
 
