@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="8dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvToDoList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/efabAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/efabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:text="Add Task"
+        android:textColor="?attr/colorOnPrimary"
+        app:icon="@drawable/ic_baseline_add_24"
+        app:iconTint="?attr/colorOnPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="?attr/colorPrimary"
+        app:fabSize="normal"
+        app:tint="?attr/colorOnPrimary"
+        app:srcCompat="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toTopOf="@+id/efabAdd"
+        app:layout_constraintEnd_toEndOf="@+id/efabAdd"
+        />
+
+    <TextView
+        android:id="@+id/tvDelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Done"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabDel"
+        app:layout_constraintEnd_toStartOf="@+id/fabDel"
+        app:layout_constraintTop_toTopOf="@+id/fabDel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="?attr/colorPrimary"
+        app:fabSize="normal"
+        app:tint="?attr/colorOnPrimary"
+        app:srcCompat="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toTopOf="@+id/fabDel"
+        app:layout_constraintEnd_toEndOf="@+id/fabDel"
+        />
+
+    <TextView
+        android:id="@+id/tvCloseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabClose"
+        app:layout_constraintEnd_toStartOf="@+id/fabClose"
+        app:layout_constraintTop_toTopOf="@+id/fabClose" />
+</androidx.constraintlayout.widget.ConstraintLayout>
